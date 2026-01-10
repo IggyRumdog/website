@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1m7fevxditkc"]
+
+[ext_resource type="FontFile" uid="uid://c28p0by5laed0" path="res://assets/fonts/PixelOperator8.ttf" id="1_d4jbe"]
+
+[node name="UI_Coins" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 967.0
+offset_top = 13.0
+offset_right = 1007.0
+offset_bottom = 62.0
+scale = Vector2(8.417741, 6.0532613)
+theme_override_fonts/font = ExtResource("1_d4jbe")
+text = "0
+"
