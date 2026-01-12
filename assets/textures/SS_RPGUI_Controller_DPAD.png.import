@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2y4x4ywxshhb"
-path="res://.godot/imported/index.apple-touch-icon.png-8085a11cc297d91deb55511843765958.ctex"
+uid="uid://b43s7wpde6l6e"
+path="res://.godot/imported/SS_RPGUI_Controller_DPAD.png-0510d86adea10cdf20975d9ec6c1dbe3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://index.apple-touch-icon.png"
-dest_files=["res://.godot/imported/index.apple-touch-icon.png-8085a11cc297d91deb55511843765958.ctex"]
+source_file="res://assets/textures/SS_RPGUI_Controller_DPAD.png"
+dest_files=["res://.godot/imported/SS_RPGUI_Controller_DPAD.png-0510d86adea10cdf20975d9ec6c1dbe3.ctex"]
 
 [params]
 
