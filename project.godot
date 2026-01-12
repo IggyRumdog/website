@@ -22,6 +22,7 @@ NavigationManager="*res://scripts/global/navigation_Manager.gd"
 [display]
 
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [input]
 
