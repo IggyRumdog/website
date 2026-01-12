@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://bhk2a5lmjfykd"]
+[gd_scene load_steps=8 format=4 uid="uid://bhk2a5lmjfykd"]
 
 [ext_resource type="TileSet" uid="uid://b5y5bgaplplt1" path="res://assets/tilemaps/TilesetData.tres" id="1_mh5bw"]
 [ext_resource type="Script" uid="uid://dbpflwulrmvus" path="res://scripts/level.gd" id="1_ypogi"]
 [ext_resource type="Texture2D" uid="uid://cijstf17fed8r" path="res://assets/textures/T_MWS_Smoke_Pixel.png" id="2_1vfbg"]
 [ext_resource type="PackedScene" uid="uid://dw67dxforcm05" path="res://scenes/player/player.tscn" id="3_1vfbg"]
 [ext_resource type="PackedScene" uid="uid://dycf8g2j3tct1" path="res://scenes/door.tscn" id="4_6mdav"]
-[ext_resource type="PackedScene" uid="uid://b7fnyutbr376d" path="res://scenes/UI/graphic_ui.tscn" id="6_1m7h2"]
 
 [sub_resource type="Curve" id="Curve_1vfbg"]
 _limits = [0.1, 1.0, 0.1, 1.0]
@@ -69,7 +68,5 @@ destination_door_tag = "OfficeDoor"
 
 [node name="SpawnMarker" parent="Door_Office" index="1"]
 position = Vector2(0, 15)
-
-[node name="GraphicUI" parent="." instance=ExtResource("6_1m7h2")]
 
 [editable path="Door_Office"]
