@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://fqmc823dr1kj"]
+
+[ext_resource type="Texture2D" uid="uid://bib74dalj60b4" path="res://assets/assetsUI/T_MWS_Sign_Bork.png" id="1_lxdbi"]
+[ext_resource type="Script" uid="uid://byudycm3brstc" path="res://scenes/sceneSprites/s_Sign_Bork.gd" id="1_yfi32"]
+[ext_resource type="PackedScene" uid="uid://bii1g0tlff5np" path="res://assets/assetsUI/animatedIcons/scene_exclamation_animated.tscn" id="2_yfi32"]
+[ext_resource type="PackedScene" uid="uid://dt41r2b0kjhcq" path="res://assets/assetsUI/animatedIcons/ineract_sign.tscn" id="3_27ctc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ggnlw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f4oih"]
+radius = 17.029387
+
+[node name="SceneSignBork" type="RigidBody2D"]
+mass = 0.001
+gravity_scale = 0.0
+script = ExtResource("1_yfi32")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_lxdbi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_ggnlw")
+
+[node name="Exclamation" parent="." instance=ExtResource("2_yfi32")]
+position = Vector2(0, -15)
+
+[node name="IneractSign" parent="." instance=ExtResource("3_27ctc")]
+scale = Vector2(0.125, 0.125)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_f4oih")
+
+[node name="BorkSignZoomed" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="BorkSignZoomed"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="BorkSignZoomed/Control"]
+texture_filter = 1
+scale = Vector2(8, 8)
+texture = ExtResource("1_lxdbi")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://co5wvrnty07ah"]
+
+[ext_resource type="Script" uid="uid://dbesmtim3r773" path="res://scenes/sceneSprites/scene_moozy.gd" id="1_6r0ok"]
+[ext_resource type="FontFile" uid="uid://dgcxpywuu8fis" path="res://assets/font/PressStart2P-Regular.ttf" id="2_gf3uu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pi4bw"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+mass = 0.001
+gravity_scale = 0.0
+script = ExtResource("1_6r0ok")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pi4bw")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -20.0
+offset_top = 8.0
+offset_right = 68.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.3647059, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_gf3uu")
+theme_override_font_sizes/font_size = 8
+text = "moOooOoo..."
+visible_characters = 0
+visible_ratio = 0.0

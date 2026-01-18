@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://b88v7ymk1ahhj"]
+
+[ext_resource type="Texture2D" uid="uid://hpr1g0b2t8cw" path="res://assets/assetsUI/T_N_DialogueBox.png" id="1_bf3dn"]
+[ext_resource type="FontFile" uid="uid://dgcxpywuu8fis" path="res://assets/font/PressStart2P-Regular.ttf" id="3_ha3bo"]
+
+[node name="SpeechBox" type="CanvasLayer"]
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="TNDialogueBox" type="Sprite2D" parent="BoxContainer"]
+texture_filter = 1
+position = Vector2(0, 100)
+scale = Vector2(2.7373416, 2.774)
+texture = ExtResource("1_bf3dn")
+
+[node name="TextEdit" type="TextEdit" parent="BoxContainer/TNDialogueBox"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -55.0
+offset_right = -6.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/current_line_color = Color(1, 1, 1, 0)
+theme_override_constants/caret_width = 1
+theme_override_fonts/font = ExtResource("3_ha3bo")
+theme_override_font_sizes/font_size = 8
+text = "This is a test
+"
+placeholder_text = "This is a test"
+wrap_mode = 1
+scroll_fit_content_width = true

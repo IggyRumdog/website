@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://b34nrx2ja8cb8"]
+
+[ext_resource type="Shader" uid="uid://dvmi3fuf83a0g" path="res://scenes/Scene_MainNewsButton.gdshader" id="1_rgkgb"]
+[ext_resource type="Script" uid="uid://dy7fmhjfl7ser" path="res://scenes/s_main_news_button.gd" id="1_wyl65"]
+[ext_resource type="Texture2D" uid="uid://dt6u0g4p3j1pk" path="res://assets/assetsUI/animatedIcons/T_TW_Button_1.png" id="2_wyl65"]
+[ext_resource type="Texture2D" uid="uid://5ymskfy6fb6d" path="res://assets/assetsUI/animatedIcons/T_TW_Button_2.png" id="3_5isc6"]
+[ext_resource type="Texture2D" uid="uid://dtd2y8g2nkqas" path="res://assets/assetsUI/T_MWS_Icon_Exclamation.png" id="4_7jutq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ccuvd"]
+shader = ExtResource("1_rgkgb")
+
+[node name="SceneMainNewsButton" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wyl65")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Control"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_ccuvd")
+position = Vector2(-97, 1)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_wyl65")
+texture_pressed = ExtResource("3_5isc6")
+
+[node name="TMwsIconExclamation" type="Sprite2D" parent="Control/TouchScreenButton"]
+texture_filter = 1
+position = Vector2(24.000122, 22.000002)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_7jutq")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -442.0
+offset_top = -216.0
+offset_right = 442.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "--MaplewolfStudios-- Web.V1
+
+Thanks for stopping by!
+
+18 Jan 2026 - This is our first post!"
+
+[connection signal="pressed" from="Control/TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
